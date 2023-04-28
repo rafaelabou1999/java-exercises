@@ -38,22 +38,13 @@ public class BankAccount {
 		return cashOut;
 	}
 	
-	public double withdraw(double cashOut) {
-		if (balance >= cashOut ) {
-			totalDown = this.balance - cashOut;
-			System.out.println("Withdraw completed");
-			return totalDown;
-		} else {
-			System.out.println("Error. There's not enough money");
-			return totalDown;
-		}
-	
-
-	}
-	
+     public double withdraw(double cashOut) {
+    	 
+    	 return totalDown;
+     }
 	
 	public double deposit(double cashIn) {
-		totalUp = this.balance - cashIn;
+
 		return totalUp;
 	}
 	
@@ -86,6 +77,7 @@ public class BankAccount {
 		    case 2:
 		    	System.out.println("Enter an amount to deposit:");
 		    	cashIn = sc.nextDouble();
+		    	totalUp = this.balance + cashIn;
 		    	System.out.println("..Deposited: $"+ cashIn + "\n (UPDATED) Balance: $" + totalUp);	
 		    	break;
 		    	
@@ -93,7 +85,7 @@ public class BankAccount {
 		    	System.out.println("Enter an amount to withdraw: ");
 		    	cashOut = sc.nextDouble();
 		    	if (balance >= cashOut ) {
-					totalDown = this.balance -= cashOut;
+					totalDown = this.balance - cashOut;
 					System.out.println("\n ..Withdraw: $:" + cashOut + "\n ..(UPDATED) Balance: $" + totalDown);
 					
 				} else {
