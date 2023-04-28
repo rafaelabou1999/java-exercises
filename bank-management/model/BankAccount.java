@@ -40,7 +40,7 @@ public class BankAccount {
 	
 	public double withdraw(double cashOut) {
 		if (balance >= cashOut ) {
-			totalDown = this.balance -= cashOut;
+			totalDown = this.balance - cashOut;
 			System.out.println("Withdraw completed");
 			return totalDown;
 		} else {
@@ -53,8 +53,8 @@ public class BankAccount {
 	
 	
 	public double deposit(double cashIn) {
-		this.balance += cashIn;
-		return balance;
+		totalUp = this.balance - cashIn;
+		return totalUp;
 	}
 	
 	
