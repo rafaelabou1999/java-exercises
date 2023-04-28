@@ -53,22 +53,25 @@ public class BankAccount {
 	
 	
 	public double deposit(double cashIn) {
-		totalUp = this.balance += cashIn;
-		return totalUp;
+		this.balance += cashIn;
+		return balance;
 	}
+	
+	
 	
 	Scanner sc = new Scanner(System.in);
 	
 	public void menu() {
-		System.out.println("+++++++++++++++");
+		System.out.println("_______");
 		System.out.println("Choose a number:");
 		System.out.println("1.Check balance ");
 		System.out.println("2.Deposit");
 		System.out.println("3.Withdraw");
+		System.out.println("_______");
 		
 		int option;
 		do {
-				
+			System.out.println("Choose an option (1/2/3):");
 			System.out.println();
 			option = sc.nextInt();
 			System.out.println();
@@ -81,15 +84,22 @@ public class BankAccount {
 		    	break;
 		    	
 		    case 2:
-		    	System.out.println("Enter an amounbt to deposit:");
+		    	System.out.println("Enter an amount to deposit:");
 		    	cashIn = sc.nextDouble();
-		    	System.out.println("(UPDATED) Balance: " + deposit(cashIn));	
+		    	System.out.println("..Deposited: $"+ cashIn + "\n (UPDATED) Balance: $" + totalUp);	
 		    	break;
 		    	
 		    case 3:
 		    	System.out.println("Enter an amount to withdraw: ");
 		    	cashOut = sc.nextDouble();
-		    	System.out.println("(UPDATED) Balance: " + withdraw(cashOut));
+		    	if (balance >= cashOut ) {
+					totalDown = this.balance -= cashOut;
+					System.out.println("\n ..Withdraw: $:" + cashOut + "\n ..(UPDATED) Balance: $" + totalDown);
+					
+				} else {
+					System.out.println("Error. There's not enough money");
+					
+				}
 		    	break;
 		    	
 		    default:
