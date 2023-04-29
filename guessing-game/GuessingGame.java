@@ -1,4 +1,3 @@
-
 package guessing;
 
 import java.util.Scanner;
