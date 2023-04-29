@@ -15,7 +15,7 @@ public class GuessingGame {
 		int scoreComputer = 0;
 		int scorePerson = 0;
 		
-	
+	        System.out.println("ROUND 1");
 		for (guess = 0; guess < 5; guess++) {
 			if (yourGuess > computerGuess) {
 				System.out.println("Too high. Try again.");
@@ -46,7 +46,7 @@ public class GuessingGame {
 		System.out.println();
 		System.out.println("Total guesses: " + guess);
 		System.out.println("Computer (" + scoreComputer + ") X You (" + scorePerson + ")");
-		
+		System.out.println("ROUND 2");
 		guess = 0;
 		for (guess = 0; guess < 5; guess++) {
 			if (yourGuess > computerGuess) {
