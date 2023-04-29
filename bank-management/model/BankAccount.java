@@ -21,22 +21,7 @@ public class BankAccount {
 		this.balance = balance;
 	}
 	
-	public double getCashIn() {
-		return cashIn;
-	}
 	
-	public void setCashIn(double cashIn) {
-		this.cashIn = cashIn;
-	}
-	
-	public void setCashOut(double cashOut) {
-		this.cashOut = cashOut;
-		
-	}
-	
-	public double getCashOut() {
-		return cashOut;
-	}
 	
      public double withdraw(double cashOut) {
     	 
@@ -62,6 +47,7 @@ public class BankAccount {
 		
 		int option;
 		do {
+			System.out.println("+++++++++++++++++++++");
 			System.out.println("Choose an option (1/2/3):");
 			System.out.println();
 			option = sc.nextInt();
@@ -77,16 +63,18 @@ public class BankAccount {
 		    case 2:
 		    	System.out.println("Enter an amount to deposit:");
 		    	cashIn = sc.nextDouble();
-		    	totalUp = this.balance + cashIn;
-		    	System.out.println("..Deposited: $"+ cashIn + "\n (UPDATED) Balance: $" + totalUp);	
+		    
+		    	balance +=  cashIn;
+		    	System.out.println("..Deposited: $"+ cashIn + "\n (UPDATED) Balance: $" + balance);	
 		    	break;
 		    	
 		    case 3:
 		    	System.out.println("Enter an amount to withdraw: ");
 		    	cashOut = sc.nextDouble();
 		    	if (balance >= cashOut ) {
-					totalDown = this.balance - cashOut;
-					System.out.println("\n ..Withdraw: $:" + cashOut + "\n ..(UPDATED) Balance: $" + totalDown);
+					
+					balance -= cashOut;
+					System.out.println("\n ..Withdraw: $:" + cashOut + "\n ..(UPDATED) Balance: $" + balance);
 					
 				} else {
 					System.out.println("Error. There's not enough money");
