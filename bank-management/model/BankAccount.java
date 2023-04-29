@@ -8,8 +8,7 @@ public class BankAccount {
 	private double balance;
 	private double cashIn;
 	private double cashOut;
-	private double totalDown;
-	private double totalUp;
+
 	
 	public BankAccount() {
 		super();
@@ -22,17 +21,7 @@ public class BankAccount {
 	}
 	
 	
-	
-     public double withdraw(double cashOut) {
-    	 
-    	 return totalDown;
-     }
-	
-	public double deposit(double cashIn) {
 
-		return totalUp;
-	}
-	
 	
 	
 	Scanner sc = new Scanner(System.in);
@@ -43,11 +32,12 @@ public class BankAccount {
 		System.out.println("1.Check balance ");
 		System.out.println("2.Deposit");
 		System.out.println("3.Withdraw");
+		System.out.println("Enter any other number to leave")
 		System.out.println("_______");
 		
 		int option;
 		do {
-			System.out.println("+++++++++++++++++++++");
+			
 			System.out.println("Choose an option (1/2/3):");
 			System.out.println();
 			option = sc.nextInt();
