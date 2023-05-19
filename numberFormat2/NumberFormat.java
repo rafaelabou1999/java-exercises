@@ -37,7 +37,7 @@ public class ex04 {
 		
 		Locale.setDefault(Locale.GERMAN);
 		NumberFormat nf6 = NumberFormat.getCurrencyInstance();
-		System.out.println(nf5.format(num));
+		System.out.println(nf6.format(num));
 		
 		Locale.setDefault(Locale.ITALY);
 		NumberFormat nf7 = NumberFormat.getCurrencyInstance();
