@@ -19,5 +19,8 @@ many students the class has and then store each of the 4 notes that each
 student in the class has. In the end the program must present a report with
 the grades per student, the average, and whether the student passed or failed
 		
-<i><strong>4) Guessing Game --></strong></i> <br>
+<i><strong>5) Guessing Game --></strong></i> <br>
 In this game, you will play against the computer. You have 4 guesses to guess the computer's number. There'll be 2 rounds
+
+<i><strong>6) NumberFormat --></strong></i> <br>
+Write a program that displays the number 123456.789 formatted in 8 currencies from different locales.
